@@ -8,7 +8,7 @@ class url_xpaths:
     spinner_xpath = '//*[@id="dynamic_catalog_spinner_link"]'
     slider_xpath = '//*[@id="dynamic_catalog_slider_link"]'
     items_on_lazy_load_xpath = '//*[@class="dynamic_catalog_card"]'
-    item_names_xpath = '(//*[@class="dynamic_catalog_card"]/div)'
+    item_names_xpath = '(//*[@class="dynamic_catalog_card_name"])[i]'
     all_items_xpath = '//*[@id="inventory_sidebar_link"]'
     bike_light_add_cart_xpath = '//*[@id="add-to-cart-sauce-labs-bike-light"]'
     all_add_to_cart_xpath = '(//*[@class="pricebar"]/button)'

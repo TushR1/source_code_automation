@@ -63,9 +63,10 @@ class testUrl:
             count = self.wait.until(EC.presence_of_all_elements_located((By.XPATH,url_xpaths.items_on_lazy_load_xpath)))
             logger.info("Getting number of product number on page..")
             count = len(count)
+            print(count)
 
             for i in range(count):
-                product_name = self.wait.until(EC.element_to_be_clickable((By.XPATH,url_xpaths.item_names_xpath[i]))).text
+                product_name = self.wait.until(EC.element_to_be_clickable((By.XPATH,f'(//*[@class="dynamic_catalog_card_name"])[{i+1}]'))).text
                 lazy_page_product_list.append(product_name)
         except Exception as e:
             raise
